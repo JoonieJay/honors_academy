@@ -1,0 +1,14 @@
+{
+  "name": "honors2",
+  "version": "1.0.0",
+  "description": "Honors Academy alternate version",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss -o dist/css/ --recursive"
+  },
+  "author": "Joon Choi",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
