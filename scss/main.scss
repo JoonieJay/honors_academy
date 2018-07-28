@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 
 * {
   box-sizing: border-box;
@@ -30,6 +31,10 @@ h2 {
   }
 }
 
+.text-secondary {
+  color: $primary-color;
+}
+
 .icons a {
   text-decoration: none;
   padding: 1rem;
@@ -58,7 +63,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  min-height: calc(100vh - 60px);
 
   &#home {
     overflow: hidden;
@@ -66,4 +71,33 @@ main {
       margin-top: 20vh;
     }
   }
+  &#about {
+    overflow: hidden;
+    text-align: center;
+    h1 {
+      margin-top: 15vh;
+      font-family: "Oswald";
+      color: black;
+    }
+  }
+  &#library {
+    overflow: hidden;
+    text-align: center;
+    h1 {
+      margin-top: 15vh;
+      font-family: "Oswald";
+      color: white;
+      letter-spacing: 1rem;
+    }
+  }
+}
+
+.main-footer {
+  font-size: 20px;
+  text-align: center;
+  padding: 1rem;
+  height: 60px;
+  color: black;
+  border-top: solid $primary-color 2px;
+  background: rgba(white, 0.4);
 }

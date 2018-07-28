@@ -39,6 +39,7 @@
   top: 0;
   width: 100%;
   visibility: hidden;
+  opacity: 0.8;
 
   &.show {
     visibility: visible;
@@ -51,7 +52,7 @@
     justify-content: center;
     float: right;
     height: 100vh;
-    width: 30%;
+    width: 20%;
     margin: 0;
     padding: 0;
     background: #008ae6;
