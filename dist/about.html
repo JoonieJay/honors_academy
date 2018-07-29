@@ -13,6 +13,11 @@
 
 <body id="bg-image2">
     <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/favicon.png" alt="Honors Academy">
+            </a>
+        </div>
         <div class="menu-btn">
             <div class="btn-line"></div>
             <div class="btn-line"></div>
@@ -20,11 +25,6 @@
         </div>
         <nav class="menu">
             <ul class="menu-nav">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">
-                        Home
-                    </a>
-                </li>
                 <li class="nav-item">
                     <a href="about.html" class="current">
                         About Us
@@ -50,13 +50,51 @@
     </header>
 
     <main id="about">
-        <h1 class="big-heading">
-            English is the key toward the new world
-        </h1>
+        <button onclick="openAbout()" id="big-heading">
+            English is the Key toward the new world
+        </button>
+        <div class="about">
+            <div class="arrow-left arrow"></div>
+            <div id="slider">
+                <div class="slide slide1">
+                    <div class="slide-content">
+                        <ul class="about-list">
+                            <li class="about-item">
+                                Comprehensive Input Hypothesis를 토대로 하여 핵심 내용 1+1
+                            </li>
+                            <li class="about-item">
+                                학습자가 배우고자 하는 외국어에 자신의 능력 범위를 넘어서는 노출이 단계적으로
+                                <br>이루어질 때 외국어를 모국어처럼 습득한다는 논리를 근거로 합니다.
+                            </li>
+                            <li class="about-item">
+                                이러한 가설을 초대로 적응하기 위해 소수 학습 구성원 중심으로 학습자 중심의 프로그램을
+                                <br>실시합니다.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide slide2">
+                    <div class="slide-content">
+                        <ul class="about-list2">
+                            <li>실력 향상</li>
+                            <p>
+                                다독과 정독을 통한 이해력 향상과 정확한 문법 수업을 통해 문장 구조와 원리를 습득함으로써 응용력을 키워주며
+                                <br>이를 통해 글쓰기와 말하기 실력을 향상시킵니다.
+                            </p>
+                            <li>학습 관리</li>
+                            <p>
+                                정확한 1:1 학습 관리를 통해 학습자의 특성과 실력을 고려하여 학습 방향을 제시하여 줍니다.
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-right arrow"></div>
+        </div>
     </main>
 
     <footer class="main-footer">
-        Copyright &copy; 2018
+        Copyright &copy; 2018 Honors English Academy. All Rights Reserved.
     </footer>
     <script src="js/main.js"></script>
 </body>

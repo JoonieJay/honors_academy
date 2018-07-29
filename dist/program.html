@@ -13,6 +13,11 @@
 
 <body id="bg-image3">
     <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/favicon.png" alt="Honors Academy">
+            </a>
+        </div>
         <div class="menu-btn">
             <div class="btn-line"></div>
             <div class="btn-line"></div>
@@ -20,11 +25,6 @@
         </div>
         <nav class="menu">
             <ul class="menu-nav">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">
-                        Home
-                    </a>
-                </li>
                 <li class="nav-item">
                     <a href="about.html" class="nav-link">
                         About Us
@@ -49,14 +49,82 @@
         </nav>
     </header>
 
-    <main id="about">
-        <h1 class="big-heading">
+    <main id="program">
+        <button onclick="openProgram()" id="pg-heading">
             Program Components
-        </h1>
+        </button>
+        <div class="program">
+            <div class="arrow-left arrow"></div>
+            <div id="slider">
+                <div class="slide slide1">
+                    <div class="slide-content">
+                        <ul class="program-list">
+                            <li class="program-item">
+                                수업시간은 1시간30분 ~ 2시간
+                            </li>
+                            <li class="program-item">
+                                한달에 8번, 일주일에 최소 2번 동원하여 책을 읽고 담임선생님과 1:1로 30분 check-up
+                            </li>
+                            <li class="program-item">
+                                지정된 check-up 시간 외 자유롭게 도서관 이용
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide slide2">
+                    <div class="slide-content">
+                        <table class="table">
+                            <tr>
+                                <th>Age</th>
+                                <th>Level</th>
+                                <th>Target Program</th>
+                            </tr>
+                            <tr>
+                                <td class="text">preschool
+                                    <br>7 y/o</td>
+                                <td class="text">R.L. : 1.0 이상</td>
+                                <td class="text">Pre-America Literacy
+                                    <br>(정규 영어교과서 수업준비단계)</td>
+                            </tr>
+                            <tr>
+                                <td class="text" rowspan="3">Elementary
+                                    <br>Program</td>
+                                <td class="text">Simplex</td>
+                                <td class="text">Language Art
+                                    <br>(Course Book을 통해 영어 4영역의 기본기를 다지면서 글쓰기 시작 단계)</td>
+                            </tr>
+                            <tr>
+                                <td class="text">Medius</td>
+                                <td class="text" id="special">정규 미국 교관서
+                                    <br>(Science, Soical Studies, History를 통해 Critical Thinking Skill을 발달 시키며
+                                    <br>창의적 글쓰 몰입 단계)</td>
+                            </tr>
+                            <tr>
+                                <td class="text">Provectus</td>
+                                <td class="text" id="special">Grammar-based TOEFL Reading</td>
+                            </tr>
+                            <tr>
+                                <td class="text" rowspan="2">Middle-School
+                                    <br>Program</td>
+                                <td class="text">외고반</td>
+                                <td class="text">토플 유형, 실전 문제풀이
+                                    <br>외고 듣기/독해 유형 다지기
+                                    <br>Essay Writing 특별 강화</td>
+                            </tr>
+                            <tr>
+                                <td class="text">내신반</td>
+                                <td class="text" id="special">중학 내신 및 고교 선행</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-right arrow"></div>
+        </div>
     </main>
 
     <footer class="main-footer">
-        Copyright &copy; 2018
+        Copyright &copy; 2018 Honors English Academy. All Rights Reserved.
     </footer>
     <script src="js/main.js"></script>
 </body>

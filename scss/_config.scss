@@ -6,6 +6,15 @@ $about-image: url(../img/about.jpg);
 $program-image: url(../img/program.jpg);
 $library-image: url(../img/library.jpg);
 
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
