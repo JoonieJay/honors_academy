@@ -101,5 +101,3 @@ arrowRight.addEventListener("click", function() {
 });
 
 startSlide();
-
-//Program

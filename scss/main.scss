@@ -125,12 +125,13 @@ main {
 
   &#library {
     overflow: hidden;
-    text-align: center;
     h1 {
       margin-top: 15vh;
       font-family: "Oswald";
       color: white;
       letter-spacing: 1rem;
+      text-align: center;
+      font-size: 4rem;
     }
   }
 }

@@ -84,3 +84,28 @@
     }
   }
 }
+
+//Library Slider
+.lb-heading {
+  cursor: pointer;
+  transform: translate3d(0, 0, 0);
+  @include easeOut;
+
+  &.leave {
+    transform: translate3d(0, -400px, 0);
+    @include easeOut;
+  }
+}
+.lb-list {
+  margin-left: 20rem;
+  transform: translate3d(0, 300px, 0);
+  visibility: hidden;
+  @include easeOut;
+
+  &.enter {
+    transform: translate3d(0, -100px, 0);
+    visibility: visible;
+    -webkit-animation: fadein 1s;
+    @include easeOut;
+  }
+}
