@@ -179,7 +179,7 @@ h2 {
 
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   width: 100%; }
   header a img {
     position: absolute;
@@ -187,6 +187,7 @@ header {
     top: 35px;
     height: 40px;
     width: 40px;
+    z-index: 5;
     opacity: 1; }
     header a img:hover {
       opacity: 0.5; }
@@ -211,23 +212,6 @@ main {
       border: none;
       cursor: pointer; }
       main#about button:hover {
-        font-size: 80px;
-        transition: all 0.5s ease-out; }
-  main#program {
-    overflow: hidden;
-    text-align: center; }
-    main#program button {
-      padding: 40px;
-      font-size: 70px;
-      margin-top: 10vh;
-      font-family: "Oswald";
-      letter-spacing: 1rem;
-      color: black;
-      outline: none;
-      background: transparent;
-      border: none;
-      cursor: pointer; }
-      main#program button:hover {
         font-size: 80px;
         transition: all 0.5s ease-out; }
   main#library {
@@ -290,57 +274,115 @@ main {
     right: 0;
     margin-right: 20px; }
 
-.program {
-  display: none; }
-  .program.show {
-    display: block;
-    -webkit-animation: fadein 2s; }
-  .program .program-list {
-    list-style: none;
-    margin-top: 15vh;
+main#program {
+  overflow: hidden;
+  padding: 0; }
+  main#program button {
+    padding: 40px;
+    font-size: 70px;
+    margin-top: 10vh;
+    font-family: "Oswald";
+    letter-spacing: 1rem;
+    color: black;
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer; }
+    main#program button:hover {
+      font-size: 80px;
+      transition: all 0.5s ease-out; }
+  main#program .curtain {
+    width: 100%;
+    min-height: calc(100vh - 60px); }
+  main#program .curtain-panel {
+    position: relative;
+    width: 50%;
+    min-height: calc(100vh - 60px);
+    float: left;
+    background: rgba(82, 88, 90, 0.2);
+    z-index: 2;
+    transition: all 0.5s ease-out; }
+  main#program .curtain-left {
+    text-align: right;
     font-size: 2rem;
-    -webkit-animation: fadein 2s; }
-    .program .program-list li {
-      margin-bottom: 5rem; }
-  .program .arrow {
-    cursor: pointer;
+    transform: translateX(-100%); }
+    main#program .curtain-left h1 {
+      margin-top: 30vh;
+      margin-right: 2rem; }
+  main#program .curtain-right {
+    text-align: left;
+    font-size: 2rem;
+    transform: translateX(100%); }
+    main#program .curtain-right h1 {
+      margin-top: 30vh;
+      margin-left: 2rem; }
+  main#program input {
     position: absolute;
-    top: 50%;
-    width: 0;
-    height: 0;
-    border-style: solid; }
-  .program .arrow-left {
-    border-width: 20px 40px 20px 0;
-    border-color: transparent black transparent transparent;
-    left: 0;
-    margin-left: 20px; }
-  .program .arrow-right {
-    border-width: 20px 0 20px 40px;
-    border-color: transparent transparent transparent black;
-    right: 0;
-    margin-right: 20px; }
-
-.table {
-  display: none; }
-  .table.show {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-animation: fadein 2s;
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: black solid 2px; }
-    .table.show td,
-    .table.show th {
-      padding: 10px;
-      border: 1px solid black;
-      overflow: hidden;
-      word-break: normal; }
-    .table.show .text {
-      text-align: center; }
-    .table.show th {
-      background-color: #e6f2ff; }
-    .table.show td:nth-child(n + 1) {
-      background-color: #e6fff7; }
-    .table.show td:nth-child(3), .table.show td#special {
-      background-color: #ffe6e6; }
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0; }
+    main#program input:checked ~ div.curtain-left {
+      transform: translateX(0); }
+    main#program input:checked ~ div.curtain-right {
+      transform: translateX(0); }
+  main#program .curtain-content {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    min-height: calc(100vh - 60px); }
+    main#program .curtain-content.show {
+      display: block;
+      -webkit-animation: fadein 2s; }
+    main#program .curtain-content .program-list {
+      list-style: none;
+      margin-top: 15vh;
+      font-size: 2rem;
+      -webkit-animation: fadein 2s; }
+      main#program .curtain-content .program-list li {
+        margin-bottom: 5rem; }
+    main#program .curtain-content .arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border-style: solid; }
+    main#program .curtain-content .arrow-left {
+      border-width: 20px 40px 20px 0;
+      border-color: transparent black transparent transparent;
+      left: 0;
+      margin-left: 20px; }
+    main#program .curtain-content .arrow-right {
+      border-width: 20px 0 20px 40px;
+      border-color: transparent transparent transparent black;
+      right: 0;
+      margin-right: 20px; }
+  main#program .table {
+    display: none; }
+    main#program .table.show {
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10vh;
+      -webkit-animation: fadein 2s;
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: black solid 2px; }
+      main#program .table.show td,
+      main#program .table.show th {
+        padding: 10px;
+        border: 1px solid black;
+        overflow: hidden;
+        word-break: normal; }
+      main#program .table.show .text {
+        text-align: center; }
+      main#program .table.show th {
+        background-color: #e6f2ff; }
+      main#program .table.show td:nth-child(n + 1) {
+        background-color: #e6fff7; }
+      main#program .table.show td:nth-child(3), main#program .table.show td#special {
+        background-color: #ffe6e6; }

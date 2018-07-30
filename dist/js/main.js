@@ -10,7 +10,7 @@ const aboutItems = document.querySelectorAll(".about-item");
 const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
 
-const program = document.querySelector(".program");
+const programCurtain = document.querySelector(".curtain-content");
 const programList = document.querySelector(".program-list");
 const programItems = document.querySelectorAll(".program-item");
 const programTable = document.querySelector(".table");
@@ -50,10 +50,12 @@ function openAbout() {
 }
 
 function openProgram() {
-  var heading = document.getElementById("pg-heading");
-  heading.style.display = "none";
+  /*var heading = document.getElementById("pg-heading");
+  heading.style.display = "none";*/
+  var curtain = document.getElementById("curtain-check");
+  curtain.style.display = "none";
+  programCurtain.classList.add("show");
   programTable.classList.add("show");
-  program.classList.add("show");
   programList.classList.add("show");
   programItems.forEach(item => item.classList.add("show"));
   arrowLeft.classList.add("show");
