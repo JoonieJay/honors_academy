@@ -11,8 +11,6 @@ const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
 
 const programCurtain = document.querySelector(".curtain-content");
-const programList = document.querySelector(".program-list");
-const programItems = document.querySelectorAll(".program-item");
 const programTable = document.querySelector(".table");
 
 //Set Initial State of Menu
@@ -50,16 +48,10 @@ function openAbout() {
 }
 
 function openProgram() {
-  /*var heading = document.getElementById("pg-heading");
-  heading.style.display = "none";*/
   var curtain = document.getElementById("curtain-check");
   curtain.style.display = "none";
   programCurtain.classList.add("show");
   programTable.classList.add("show");
-  programList.classList.add("show");
-  programItems.forEach(item => item.classList.add("show"));
-  arrowLeft.classList.add("show");
-  arrowRight.classList.add("show");
 }
 
 let sliderLists = document.querySelectorAll(".slide"),

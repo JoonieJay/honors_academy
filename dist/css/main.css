@@ -33,7 +33,7 @@
   top: 0;
   width: 100%;
   visibility: hidden;
-  opacity: 0.8; }
+  opacity: 0.9; }
   .menu.show {
     visibility: visible; }
   .menu-nav {
@@ -43,11 +43,10 @@
     justify-content: center;
     float: right;
     height: 100vh;
-    width: 20%;
+    width: 15%;
     margin: 0;
     padding: 0;
     background: #008ae6;
-    opacity: 0.9;
     list-style: none;
     transform: translate3d(100%, 0, 0);
     transition: all 0.5s ease-out; }
@@ -145,6 +144,22 @@ body {
       width: 100%;
       height: 100%;
       background: rgba(105, 116, 119, 0.8);
+      z-index: -1; }
+  body#bg-image5 {
+    background: url(../img/contact.jpg);
+    background-attachment: fixed;
+    background-size: 100rem;
+    /*.btn-line {
+        background: $primary-color;
+      }*/ }
+    body#bg-image5:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(235, 198, 219, 0.5);
       z-index: -1; }
 
 h1,
@@ -277,20 +292,6 @@ main {
 main#program {
   overflow: hidden;
   padding: 0; }
-  main#program button {
-    padding: 40px;
-    font-size: 70px;
-    margin-top: 10vh;
-    font-family: "Oswald";
-    letter-spacing: 1rem;
-    color: black;
-    outline: none;
-    background: transparent;
-    border: none;
-    cursor: pointer; }
-    main#program button:hover {
-      font-size: 80px;
-      transition: all 0.5s ease-out; }
   main#program .curtain {
     width: 100%;
     min-height: calc(100vh - 60px); }
@@ -332,57 +333,67 @@ main#program {
     z-index: 1;
     position: absolute;
     text-align: center;
-    width: 100%;
+    width: 95%;
     min-height: calc(100vh - 60px); }
     main#program .curtain-content.show {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       -webkit-animation: fadein 2s; }
+    main#program .curtain-content .table {
+      display: none; }
+      main#program .curtain-content .table.show {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10vh;
+        -webkit-animation: fadein 2s;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: black solid 2px; }
+        main#program .curtain-content .table.show td,
+        main#program .curtain-content .table.show th {
+          padding: 10px;
+          border: 1px solid black;
+          overflow: hidden;
+          word-break: normal; }
+        main#program .curtain-content .table.show .text {
+          text-align: center; }
+        main#program .curtain-content .table.show th {
+          background-color: #e6f2ff; }
+        main#program .curtain-content .table.show td:nth-child(n + 1) {
+          background-color: #e6fff7; }
+        main#program .curtain-content .table.show td:nth-child(3), main#program .curtain-content .table.show td#special {
+          background-color: #ffe6e6; }
     main#program .curtain-content .program-list {
+      padding: 0;
+      margin-top: 20vh;
+      margin-right: 0;
       list-style: none;
-      margin-top: 15vh;
-      font-size: 2rem;
-      -webkit-animation: fadein 2s; }
+      text-align: left;
+      font-size: 25px; }
       main#program .curtain-content .program-list li {
-        margin-bottom: 5rem; }
-    main#program .curtain-content .arrow {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: 0;
-      height: 0;
-      border-style: solid; }
-    main#program .curtain-content .arrow-left {
-      border-width: 20px 40px 20px 0;
-      border-color: transparent black transparent transparent;
-      left: 0;
-      margin-left: 20px; }
-    main#program .curtain-content .arrow-right {
-      border-width: 20px 0 20px 40px;
-      border-color: transparent transparent transparent black;
-      right: 0;
-      margin-right: 20px; }
-  main#program .table {
-    display: none; }
-    main#program .table.show {
-      display: table;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 10vh;
-      -webkit-animation: fadein 2s;
-      border-collapse: collapse;
-      border-spacing: 0;
-      border: black solid 2px; }
-      main#program .table.show td,
-      main#program .table.show th {
-        padding: 10px;
-        border: 1px solid black;
-        overflow: hidden;
-        word-break: normal; }
-      main#program .table.show .text {
-        text-align: center; }
-      main#program .table.show th {
-        background-color: #e6f2ff; }
-      main#program .table.show td:nth-child(n + 1) {
-        background-color: #e6fff7; }
-      main#program .table.show td:nth-child(3), main#program .table.show td#special {
-        background-color: #ffe6e6; }
+        margin-bottom: 80px; }
+
+main#contact {
+  overflow: hidden; }
+
+main .contact-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px; }
+  main .contact-area .map-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: black; }
+  main .contact-area #map {
+    width: 400px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin: auto;
+    border: solid black 2px; }
+  main .contact-area .contact-info h1 {
+    color: black; }

@@ -187,23 +187,6 @@ main {
   &#program {
     overflow: hidden;
     padding: 0;
-    button {
-      padding: 40px;
-      font-size: 70px;
-      margin-top: 10vh;
-      font-family: "Oswald";
-      letter-spacing: 1rem;
-      color: black;
-      outline: none;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-
-      &:hover {
-        font-size: 80px;
-        @include easeOut;
-      }
-    }
     //Curtain Effect
 
     .curtain {
@@ -258,78 +241,95 @@ main {
       z-index: 1;
       position: absolute;
       text-align: center;
-      width: 100%;
+      width: 95%;
       min-height: calc(100vh - 60px);
       &.show {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         -webkit-animation: fadein 2s;
       }
-
-      .program-list {
-        list-style: none;
-        margin-top: 15vh;
-        font-size: 2rem;
-        -webkit-animation: fadein 2s;
-        li {
-          margin-bottom: 5rem;
+      .table {
+        display: none;
+        &.show {
+          display: table;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 10vh;
+          -webkit-animation: fadein 2s;
+          border-collapse: collapse;
+          border-spacing: 0;
+          border: black solid 2px;
+          td,
+          th {
+            padding: 10px;
+            border: 1px solid black;
+            overflow: hidden;
+            word-break: normal;
+          }
+          .text {
+            text-align: center;
+          }
+          th {
+            background-color: #e6f2ff;
+          }
+          td {
+            &:nth-child(n + 1) {
+              background-color: #e6fff7;
+            }
+            &:nth-child(3),
+            &#special {
+              background-color: #ffe6e6;
+            }
+          }
         }
       }
-
-      .arrow {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: 0;
-        height: 0;
-        border-style: solid;
-      }
-      .arrow-left {
-        border-width: 20px 40px 20px 0;
-        border-color: transparent black transparent transparent;
-        left: 0;
-        margin-left: 20px;
-      }
-      .arrow-right {
-        border-width: 20px 0 20px 40px;
-        border-color: transparent transparent transparent black;
-        right: 0;
-        margin-right: 20px;
+      .program-list {
+        padding: 0;
+        margin-top: 20vh;
+        margin-right: 0;
+        list-style: none;
+        text-align: left;
+        font-size: 25px;
+        li {
+          margin-bottom: 80px;
+        }
       }
     }
+  }
+}
 
-    .table {
-      display: none;
-      &.show {
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10vh;
-        -webkit-animation: fadein 2s;
-        border-collapse: collapse;
-        border-spacing: 0;
-        border: black solid 2px;
-        td,
-        th {
-          padding: 10px;
-          border: 1px solid black;
-          overflow: hidden;
-          word-break: normal;
-        }
-        .text {
-          text-align: center;
-        }
-        th {
-          background-color: #e6f2ff;
-        }
-        td {
-          &:nth-child(n + 1) {
-            background-color: #e6fff7;
-          }
-          &:nth-child(3),
-          &#special {
-            background-color: #ffe6e6;
-          }
-        }
+//Contact-Us
+
+main {
+  &#contact {
+    overflow: hidden;
+  }
+  .contact-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+
+    .map-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: black;
+    }
+
+    #map {
+      width: 400px;
+      height: 400px;
+      top: 0;
+      left: 0;
+      position: absolute;
+      margin: auto;
+      border: solid black 2px;
+    }
+
+    .contact-info {
+      h1 {
+        color: black;
       }
     }
   }
