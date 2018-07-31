@@ -1,6 +1,6 @@
 var mapOptions = {
   center: new naver.maps.LatLng(35.121549, 126.912702),
-  zoom: 13,
+  zoom: 11,
   minZoom: 1,
   zoomControl: true,
   zoomControlOptions: {
