@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <title>Program</title>
+</head>
+
+<body id="bg-image3">
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/favicon.png" alt="Honors Academy">
+            </a>
+        </div>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+        <nav class="menu">
+            <ul class="menu-nav">
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        About Us
+                        <br>
+                        <span class="korean">소개</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="program.html" class="current">
+                        Program
+                        <br>
+                        <span class="korean">프로그램</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="library.html" class="nav-link">
+                        Library
+                        <br>
+                        <span class="korean">도서관</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        Contact Us
+                        <br>
+                        <span class="korean">연락처</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="program">
+        <div class="curtain">
+            <input type="checkbox" checked onclick="openProgram()" id="curtain-check">
+            <div class="curtain-panel curtain-left">
+                <h1 class="pg-title">Program</h1>
+            </div>
+            <div class="curtain-panel curtain-right">
+                <h1 class="pg-title">Components</h1>
+            </div>
+            <div class="curtain-content">
+                <table class="table">
+                    <tr>
+                        <th>Age</th>
+                        <th>Level</th>
+                        <th>Target Program</th>
+                    </tr>
+                    <tr>
+                        <td class="text">Preschool
+                            <br>7 y/o</td>
+                        <td class="text">R.L. : 1.0 이상</td>
+                        <td class="text">Pre-America Literacy
+                            <br>(정규 영어교과서 수업준비단계)</td>
+                    </tr>
+                    <tr>
+                        <td class="text" rowspan="3">Elementary
+                            <br>Program</td>
+                        <td class="text">Simplex</td>
+                        <td class="text">Language Art
+                            <br>(Course Book을 통해 영어 4영역의 기본기를 다지면서 글쓰기 시작 단계)</td>
+                    </tr>
+                    <tr>
+                        <td class="text">Medius</td>
+                        <td class="text" id="special">정규 미국 교관서
+                            <br>(Science, Soical Studies, History를 통해 Critical Thinking Skill을 발달 시키며
+                            <br>창의적 글쓰 몰입 단계)</td>
+                    </tr>
+                    <tr>
+                        <td class="text">Provectus</td>
+                        <td class="text" id="special">Grammar-based TOEFL Reading</td>
+                    </tr>
+                    <tr>
+                        <td class="text" rowspan="2">Middle-School
+                            <br>Program</td>
+                        <td class="text">외고반</td>
+                        <td class="text">토플 유형, 실전 문제풀이
+                            <br>외고 듣기/독해 유형 다지기
+                            <br>Essay Writing 특별 강화</td>
+                    </tr>
+                    <tr>
+                        <td class="text">내신반</td>
+                        <td class="text" id="special">중학 내신 및 고교 선행</td>
+                    </tr>
+                </table>
+                <ul class="program-list">
+                    <li>수업시간은 1시간30분 ~ 2시간</li>
+                    <li>한달에 8번, 일주일에 최소 2번 동원하여 책을 읽고
+                        <br>담임선생님과 1:1로 30분 check-up</li>
+                    <li>지정된 check-up 시간 외 자유롭게 도서관 이용</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        Copyright &copy; 2018 Honors English Academy. All Rights Reserved.
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
